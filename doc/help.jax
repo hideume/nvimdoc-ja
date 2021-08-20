@@ -6,14 +6,25 @@
 		    "j" to go down, "k" to go up, "l" to go right.	 j
 Close this window:  Use ":q<Enter>".
    Get out of Vim:  Use ":qa!<Enter>" (careful, all changes are lost!).
+	     移動:  カーソルを使用するか、"h" で左、"j" で下、	       h   l
+		     "k" で上、"l" で右に移動できます。			 j
+      ヘルプの終了:  ":q<Enter>" とタイプします。
+	Vim の終了:  ":qa!<Enter>" とします(注意! 変更はすべて破棄されます)。
 
 Jump to a subject:  Position the cursor on a tag (e.g. |bars|) and hit CTRL-].
    With the mouse:  Double-click the left mouse button on a tag, e.g. |bars|.
 	Jump back:  Type CTRL-O.  Repeat to go further back.
+	項目へジャンプ:  タグ (例: |bars|) にカーソルを合わせ、CTRL-] を押します。
+	マウスの使用:  ":set mouse=a" と入力してマウスを有効にしてください
+		     タグをマウスの左ボタンでダブルクリックすると、項目にジャンプできます。(例: |bars|)
+    元の場所に戻る:  CTRL-O を押します。繰り返すと更に戻れます。
 
 Get specific help:  It is possible to go directly to whatever you want help
 		    on, by giving an argument to the |:help| command.
 		    Prepend something to specify the context:  *help-context*
+    項目を指定する:  |:help| コマンドに項目を指定することで、その項目を直ちに
+		    表示できます。修飾子を先行入力することで、調べたい項目の種
+		    類を指定することもできます:  *help-context*
 
 			  WHAT			PREPEND    EXAMPLE	~
 		      Normal mode command		   :help x
@@ -25,6 +36,16 @@ Get specific help:  It is possible to go directly to whatever you want help
 		      Option			  '	   :help 'textwidth'
 		      Regular expression	  /	   :help /[
 		    See |help-summary| for more contexts and an explanation.
+			  種類			修飾子	    例	~
+		  ノーマルモードコマンド		   :help x
+		  ビジュアルモードコマンド	 v_	   :help v_u
+		  挿入モードコマンド		 i_	   :help i_<Esc>
+		  コマンドラインコマンド	 :	   :help :quit
+		  コマンドライン編集		 c_	   :help c_<Del>
+		  Vim の起動引数		 -	   :help -r
+		  オプション			 '	   :help 'textwidth'
+		  正規表現			 /	   :help /[
+		    その他の種類については |help-summary| を参照してください。
 
   Search for help:  Type ":help word", then hit CTRL-D to see matching
 		    help entries for "word".
